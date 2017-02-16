@@ -44,9 +44,9 @@ public class RNPrimeFactorModule extends ReactContextBaseJavaModule {
                 q = tmp;
             }
 
-            WritableArray arr = new WritableArray();
-            arr.pushString(p.toString(16));
-            arr.pushString(q.toString(16));
+            WritableArray arr = new WritableNativeArray();
+            arr.pushString(Long.toHexString(p));
+            arr.pushString(Long.toHexString(q));
 
             promise.resolve(arr);
         } catch (Exception e) {
