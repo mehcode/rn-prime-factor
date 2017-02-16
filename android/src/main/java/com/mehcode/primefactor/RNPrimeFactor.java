@@ -1,54 +1,35 @@
 package com.mehcode.primefactor;
 
-import android.bluetooth.BluetoothAdapter;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.os.Build;
-import android.provider.Settings.Secure;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-import com.facebook.react.bridge.LifecycleEventListener;
-import com.facebook.react.bridge.Promise;
+import com.facebook.react.ReactPackage;
+import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
-import com.facebook.react.bridge.ReactContextBaseJavaModule;
-import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.bridge.WritableArray;
-import com.facebook.react.bridge.WritableNativeArray;
-import com.facebook.react.modules.core.DeviceEventManagerModule;
+import com.facebook.react.uimanager.ViewManager;
+import com.facebook.react.bridge.JavaScriptModule;
 
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
+public class RNPrimeFactor implements ReactPackage {
+  @Override
+  public List<NativeModule> createNativeModules(
+                              ReactApplicationContext reactContext) {
+    List<NativeModule> modules = new ArrayList<>();
 
-public class RNPrimeFactorModule extends ReactContextBaseJavaModule {
-    static {
-        System.loadLibrary("pf_jni");
-    }
+    modules.add(new RNPrimeFactorModule(reactContext));
 
-    public RNPrimeFactorModule(ReactApplicationContext reactContext) {
-        super(reactContext);
-    }
+    return modules;
+  }
 
-    @Override
-    public String getName() {
-        return "RNPrimeFactor";
-    }
+  @Override
+  public List<Class<? extends JavaScriptModule>> createJSModules() {
+  	return Collections.emptyList();
+  }
 
-    private native long getFactorJNI(long pq);
-
-    @ReactMethod
-    public void findFactors(String pqHexStr, Promise promise) {
-        try {
-            long pq = Long.parseLong(pqHexStr, 16);
-            long q = getFactorJNI(pq);
-            long p = pq / q;
-
-            WritableArray arr = new WritableNativeArray();
-            arr.pushString(Long.toHexString(p));
-            arr.pushString(Long.toHexString(q));
-
-            promise.resolve(arr);
-        } catch (Exception e) {
-            promise.reject("ERR", e);
-        }
-    }
+  @Override
+  public List<ViewManager> createViewManagers(
+                            ReactApplicationContext reactContext) {
+  	return Collections.emptyList();
+  }
 }
