@@ -1,0 +1,21 @@
+{
+  "name": "rn-prime-factor",
+  "version": "0.1.0",
+  "description": "Decompose a given number into 2 prime co-factors (in C).",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehcode/rn-prime-factor.git"
+  },
+  "keywords": [
+    "react-native",
+    "ios",
+    "android",
+    "prime-factor"
+  ],
+  "author": "Ryan Leckey <leckey.ryan@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mehcode/rn-prime-factor/issues"
+  },
+  "homepage": "https://github.com/mehcode/rn-prime-factor#readme"
+}
