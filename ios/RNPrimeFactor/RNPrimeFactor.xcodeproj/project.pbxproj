@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		76DEFD8C1E57DFB800A6A7A1 /* RNPrimeFactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DEFD8B1E57DFB800A6A7A1 /* RNPrimeFactor.m */; };
 		76DEFD8D1E57DFB800A6A7A1 /* RNPrimeFactor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 76DEFD8A1E57DFB800A6A7A1 /* RNPrimeFactor.h */; };
-		76DEFDCA1E57E27000A6A7A1 /* pf.c in Sources */ = {isa = PBXBuildFile; fileRef = 76DEFDC91E57E27000A6A7A1 /* pf.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,8 +28,6 @@
 		76DEFD871E57DFB800A6A7A1 /* libRNPrimeFactor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNPrimeFactor.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		76DEFD8A1E57DFB800A6A7A1 /* RNPrimeFactor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNPrimeFactor.h; sourceTree = "<group>"; };
 		76DEFD8B1E57DFB800A6A7A1 /* RNPrimeFactor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNPrimeFactor.m; sourceTree = "<group>"; };
-		76DEFDC81E57E26500A6A7A1 /* pf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pf.h; sourceTree = "<group>"; };
-		76DEFDC91E57E27000A6A7A1 /* pf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pf.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +62,6 @@
 			children = (
 				76DEFD8A1E57DFB800A6A7A1 /* RNPrimeFactor.h */,
 				76DEFD8B1E57DFB800A6A7A1 /* RNPrimeFactor.m */,
-				76DEFDC81E57E26500A6A7A1 /* pf.h */,
-				76DEFDC91E57E27000A6A7A1 /* pf.c */,
 			);
 			path = RNPrimeFactor;
 			sourceTree = "<group>";
@@ -129,7 +124,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				76DEFD8C1E57DFB800A6A7A1 /* RNPrimeFactor.m in Sources */,
-				76DEFDCA1E57E27000A6A7A1 /* pf.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
